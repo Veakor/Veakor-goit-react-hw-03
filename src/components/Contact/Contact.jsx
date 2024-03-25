@@ -2,11 +2,11 @@
 
 import styles from './Contact.module.css'; 
 
-const Contact = ({ contact, onDeleteContact }) => {
+const Contact = ({ contact, onDelete }) => {
   const { id, name, number } = contact;
 
   const handleDelete = () => {
-    onDeleteContact(id);
+    onDelete(id);
   };
 
   return (
