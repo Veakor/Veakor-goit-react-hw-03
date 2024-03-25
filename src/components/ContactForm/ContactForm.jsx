@@ -37,7 +37,7 @@ const ContactForm = ({ addContact }) => {
                 <ErrorMessage name="number" component="div" />
               </div>
               <button type="submit" disabled={isSubmitting}>
-                Add Contact
+                Delete
               </button>
             </Form>
           )}
