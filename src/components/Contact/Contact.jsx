@@ -2,11 +2,11 @@
 
 import styles from './Contact.module.css'; 
 
-const Contact = ({ contact, onDelete }) => {
+const Contact = ({ contact, onDeleteContact }) => {
   const { id, name, number } = contact;
 
   const handleDelete = () => {
-    onDelete(id);
+    onDeleteContact(id);
   };
 
   return (
@@ -18,8 +18,7 @@ const Contact = ({ contact, onDelete }) => {
         <button className={styles.contactButton} onClick={handleDelete}>Delete</button>
       </li>
     );
-};
-
+  };
 export default Contact;
 
 
