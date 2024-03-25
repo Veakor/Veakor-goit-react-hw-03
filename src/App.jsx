@@ -29,7 +29,7 @@ const App = () => {
   const filteredContacts = contacts.filter(contact =>
     contact.name.toLowerCase().includes(searchTerm)
   );
-  const onDelete = id => {
+   const onDelete = id => {
     setContacts(contacts.filter(contact => contact.id !== id));
   };
 
