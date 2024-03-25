@@ -1,23 +1,17 @@
-import { useState } from 'react';
+import styles from './SearchBox.module.css'; 
 
-const SearchBox = ({ onSearch }) => {
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const handleSearch = (e) => {
-    setSearchTerm(e.target.value);
-    onSearch(e.target.value); 
-  };
-
-  return (
-    <div className="search-box">
+const SearchBox = ({ searchTerm, onSearchChange }) => {
+    return (
+        <div className={styles.searchBoxContainer}>
       <input
+        className={styles.searchBoxInput}
         type="text"
-        placeholder="Search by name"
+        placeholder="Search contacts..."
         value={searchTerm}
-        onChange={handleSearch}
+        onChange={onSearchChange}
       />
     </div>
-  );
-};
-
-export default SearchBox;
+    );
+  };
+  
+  export default SearchBox;

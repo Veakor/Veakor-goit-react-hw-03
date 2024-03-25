@@ -1,0 +1,31 @@
+.contact {
+    width: 300px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px;
+    border: 2px solid #161515;
+    margin-bottom: 10px;
+  }
+  
+  .contact-details {
+    display: flex;
+    flex-direction: column; 
+  }
+  
+  .contact-name {
+    margin: 0;
+  }
+  
+  .contact-number {
+    margin: 0;
+  }
+  
+  .contact-button {
+    padding: 5px 10px;
+    background-color: #bcb7b7;
+    color: #111010;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
