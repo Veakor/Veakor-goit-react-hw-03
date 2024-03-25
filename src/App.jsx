@@ -4,9 +4,6 @@ import SearchBox from './components/SearchBox/SearchBox';
 import ContactForm from './components/ContactForm/ContactForm'
 
 
-
-
-
 const initialContacts = [
   { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
   { id: 'id-2', name: 'Hermione Kline', number: '443-89-12' },
@@ -35,7 +32,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>Phonebook</h1>
+      <h1>Phone book</h1>
       <ContactForm addContact={addContact} /> 
       <SearchBox searchTerm={searchTerm} onSearchChange={handleSearchChange} />
       <ContactList contacts={filteredContacts} />
