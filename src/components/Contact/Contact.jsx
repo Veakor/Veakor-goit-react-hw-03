@@ -15,7 +15,7 @@ const Contact = ({ contact, onDelete }) => {
           <p className={styles.contactName}>Name: {name}</p>
           <p className={styles.contactNumber}>Number: {number}</p>
         </div>
-        <button className={styles.contactButton} onClick={handleDelete}>Delete</button>
+        <button className={styles.contactButton} onClick={onDelete}>Delete</button>
       </li>
     );
   };

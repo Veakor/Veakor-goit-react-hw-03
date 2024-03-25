@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ContactList from './components/ContactList/ContactList';
 import SearchBox from './components/SearchBox/SearchBox';
 import ContactForm from './components/ContactForm/ContactForm'
@@ -14,6 +14,22 @@ const initialContacts = [
 const App = () => {
   const [contacts, setContacts] = useState(initialContacts);
   const [searchTerm, setSearchTerm] = useState('');
+
+  useEffect(() => {
+    const storedContacts = localStorage.getItem('contacts');
+    console.log('storedContacts:', storedContacts);
+    if (storedContacts) {
+      setContacts(JSON.parse(storedContacts));
+    } else {
+      setContacts(initialContacts); 
+    }
+  }, []); 
+  
+  useEffect(() => {
+    localStorage.setItem('contacts', JSON.stringify(contacts));
+    console.log('Contacts saved to localStorage:', contacts);
+  }, [contacts]);
+
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value.toLowerCase());
