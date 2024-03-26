@@ -45,12 +45,18 @@ const ContactForm = ({ addContact }) => {
             <div>
               <label htmlFor="name">Name:</label>
               <Field type="text" id="name" name="name" />
-              <ErrorMessage name="name" component="div" className={styles['error-message']} />
+              <ErrorMessage 
+              name="name" 
+              component="div" 
+              className={styles.error} />
             </div>
             <div>
               <label htmlFor="number">Number:</label>
               <Field type="text" id="number" name="number" />
-              <ErrorMessage name="number" component="div" className={styles['error-message']} />
+              <ErrorMessage 
+              name="number" 
+              component="div" 
+              className={styles.error} />
             </div>
             <button type="submit" disabled={isSubmitting}>
               Add Contact
