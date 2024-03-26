@@ -12,17 +12,12 @@ const initialContacts = [
 ];
 
 const App = () => {
-  const [contacts, setContacts] = useState(initialContacts);
-  const [searchTerm, setSearchTerm] = useState('');
-
-
-  useEffect(() => {
+  const [contacts, setContacts] = useState(() => {
     const storedContacts = localStorage.getItem('contacts');
-    if (storedContacts) {
-      setContacts(JSON.parse(storedContacts));
-    } 
-  }, []);
-
+    return JSON.parse(storedContacts) ?? initialContacts
+    });
+    
+const [searchTerm, setSearchTerm] = useState('');
   
   useEffect(() => {
     localStorage.setItem('contacts', JSON.stringify(contacts));
